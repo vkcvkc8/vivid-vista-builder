@@ -1,96 +1,98 @@
 import { Button } from "@/components/ui/button";
+import { Search } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="bg-white border-b py-4">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-800">Sunsor</h1>
-          <div className="space-x-6">
-            <a href="#" className="text-gray-600 hover:text-gray-900">Home</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900">Products</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900">About</a>
-            <a href="#" className="text-gray-600 hover:text-gray-900">Contact</a>
+      {/* Promo Banner */}
+      <div className="bg-[#F5B100] py-2 px-4">
+        <div className="container mx-auto flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <span className="text-2xl">⭐</span>
+            <p className="text-black">
+              Get 5% Off your first order,
+              <span className="font-semibold"> Promo: ORDER5</span>
+            </p>
           </div>
+          <div className="flex items-center gap-2 bg-white/20 rounded-full px-4 py-1">
+            <span className="text-xl">📍</span>
+            <span className="text-black">
+              Dehradun, Uttarakhand - 248171, India
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Navigation */}
+      <nav className="bg-white py-4 border-b border-gray-100">
+        <div className="container mx-auto px-4 flex justify-between items-center">
+          <img 
+            src="/lovable-uploads/b7003e17-377d-4320-92e6-a0a3a421a9d2.png" 
+            alt="Sunsor Logo" 
+            className="h-12"
+          />
+          <div className="space-x-8">
+            <a href="#" className="text-gray-800 hover:text-[#F5B100]">Our Product</a>
+            <a href="#" className="text-gray-800 hover:text-[#F5B100]">Our Story</a>
+            <a href="#" className="text-gray-800 hover:text-[#F5B100]">Blogs</a>
+            <a href="#" className="text-gray-800 hover:text-[#F5B100]">About Us</a>
+            <a href="#" className="text-gray-800 hover:text-[#F5B100]">Contact us</a>
+          </div>
+          <button className="p-2 hover:bg-gray-100 rounded-full">
+            <Search className="h-6 w-6 text-[#DC2626]" />
+          </button>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-24">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-5xl font-bold text-gray-900 mb-6">
-            Experience Modern Design
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Discover our collection of minimalist and elegant products designed for your lifestyle.
-          </p>
-          <Button className="bg-black hover:bg-gray-800 text-white px-8 py-6">
-            Explore Collection
-          </Button>
-        </div>
-      </section>
-
-      {/* Featured Section */}
-      <section className="bg-gray-50 py-24">
-        <div className="container mx-auto px-4">
-          <h3 className="text-3xl font-bold text-center mb-12">Featured Products</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
-              <div key={item} className="bg-white p-6 rounded-lg shadow-sm">
-                <div className="aspect-square bg-gray-100 rounded-lg mb-4"></div>
-                <h4 className="text-xl font-semibold mb-2">Product {item}</h4>
-                <p className="text-gray-600">
-                  A beautiful piece designed with simplicity in mind.
-                </p>
-              </div>
-            ))}
+      <section 
+        className="relative min-h-[80vh] bg-cover bg-center"
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('/lovable-uploads/85865ee8-ec9b-4681-9cca-e8182dc64f96.png')`
+        }}
+      >
+        <div className="container mx-auto px-4 py-24 relative">
+          <div className="max-w-2xl">
+            <img 
+              src="/lovable-uploads/b7003e17-377d-4320-92e6-a0a3a421a9d2.png" 
+              alt="Sunsor Logo" 
+              className="h-24 mb-8"
+            />
+            <h2 className="text-6xl font-bold text-white mb-6 drop-shadow-lg">
+              The Sunsor Quality
+            </h2>
+            <p className="text-xl text-white mb-8 drop-shadow-lg">
+              Hand - picked Ingredients, careful processing and untouched packaging ensuring superior quality.
+            </p>
+            <Button 
+              className="bg-[#DC2626] hover:bg-[#DC2626]/90 text-white px-8 py-6 text-lg flex items-center gap-2"
+            >
+              Explore
+              <span className="text-2xl">→</span>
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      {/* Customer Reviews */}
+      <section className="py-8 bg-white/80 backdrop-blur-sm -mt-20 relative">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h5 className="font-bold mb-4">Sunsor</h5>
-              <p className="text-gray-400">
-                Creating beautiful spaces through minimalist design.
-              </p>
+          <div className="flex items-center gap-4">
+            <div className="flex -space-x-4">
+              <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Customer" className="w-12 h-12 rounded-full border-2 border-white" />
+              <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Customer" className="w-12 h-12 rounded-full border-2 border-white" />
+              <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Customer" className="w-12 h-12 rounded-full border-2 border-white" />
             </div>
             <div>
-              <h5 className="font-bold mb-4">Links</h5>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white">Home</a></li>
-                <li><a href="#" className="hover:text-white">Products</a></li>
-                <li><a href="#" className="hover:text-white">About</a></li>
-                <li><a href="#" className="hover:text-white">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="font-bold mb-4">Contact</h5>
-              <ul className="space-y-2 text-gray-400">
-                <li>contact@sunsor.com</li>
-                <li>+1 (555) 123-4567</li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="font-bold mb-4">Newsletter</h5>
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="bg-gray-800 px-4 py-2 rounded text-white flex-grow"
-                />
-                <Button variant="secondary">
-                  Subscribe
-                </Button>
+              <h4 className="font-semibold">Our Happy Customer</h4>
+              <div className="flex items-center gap-2">
+                <span className="text-[#F5B100]">⭐ 4.8</span>
+                <span className="text-gray-600">(12.5k Review)</span>
               </div>
             </div>
           </div>
         </div>
-      </footer>
+      </section>
     </div>
   );
 };
