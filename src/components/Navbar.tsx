@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/">
           <img 
-            src="/lovable-uploads/b7003e17-377d-4320-92e6-a0a3a421a9d2.png" 
+            src="/lovable-uploads/e81a6ea8-aac9-4e08-bf49-00354b6e822f.png" 
             alt="Sunsor Logo" 
             className="h-12"
           />
