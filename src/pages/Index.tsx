@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
+import Navbar from "@/components/Navbar";
 
 const Index = () => {
   return (
@@ -24,25 +25,7 @@ const Index = () => {
       </div>
 
       {/* Navigation */}
-      <nav className="bg-white py-4 border-b border-gray-100">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <img 
-            src="/lovable-uploads/b7003e17-377d-4320-92e6-a0a3a421a9d2.png" 
-            alt="Sunsor Logo" 
-            className="h-12"
-          />
-          <div className="space-x-8">
-            <a href="#" className="text-gray-800 hover:text-[#F5B100]">Our Product</a>
-            <a href="#" className="text-gray-800 hover:text-[#F5B100]">Our Story</a>
-            <a href="#" className="text-gray-800 hover:text-[#F5B100]">Blogs</a>
-            <a href="#" className="text-gray-800 hover:text-[#F5B100]">About Us</a>
-            <a href="#" className="text-gray-800 hover:text-[#F5B100]">Contact us</a>
-          </div>
-          <button className="p-2 hover:bg-gray-100 rounded-full">
-            <Search className="h-6 w-6 text-[#DC2626]" />
-          </button>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section 
